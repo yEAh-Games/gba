@@ -23,6 +23,19 @@
 		<script src="resources/biosbin.js"></script>
 
 		<script>
+			// Check for the fullscreen parameter in the URL
+const urlParams = new URLSearchParams(window.location.search);
+const fullscreenParam = urlParams.get('fullscreen');
+
+// If the fullscreen parameter is present, trigger the fullScreen() function
+if (fullscreenParam === 'true') {
+  fullScreen();
+}
+
+			</script>
+
+
+		<script>
 			let gba;
 			let runCommands = [];
 			let debug = null;
@@ -311,7 +324,7 @@
 	<body>
 		<canvas id="screen" width="480" height="320"></canvas>
 		<section id="gameinfo">
-			<table id="mapping">
+			<!--<table id="mapping">
 				<tr>
 					<td>Up</td>
 					<td>Up</td>
@@ -352,7 +365,7 @@
 					<td>Select</td>
 					<td>\</td>
 				</tr>
-			</table>
+			</table>-->
 		</section>
 		<section id="controls">
 			<div id="preload">
@@ -394,15 +407,15 @@
 				/>
 			</div>
 			<div id="ingame" class="hidden">
-				<button id="pause" class="bigbutton" onclick="togglePause()">
+				<button id="pause" onclick="togglePause()">
 					PAUSE
 				</button>
-				<button class="bigbutton" onclick="reset()">RESET</button>
+				<button  onclick="reset()">RESET</button>
 				<button onclick="gba.downloadSavedata()">
-					Download Savegame
+					SAVE
 				</button>
 				<button onclick="screenshot()">Screenshot</button>
-				<button onclick="fullScreen()">Full screen</button>
+				<button onclick="fullScreen()">FullScreen</button>
 				<label id="pixelated">
 					<input
 						type="checkbox"
@@ -426,7 +439,6 @@
 						oninput="setVolume(this.value)"
 					/>
 				</div>
-				<p id="openDebug" onclick="enableDebug()">Debugger</p>
 			</div>
 		</section>
 
