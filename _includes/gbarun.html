@@ -324,48 +324,7 @@ if (fullscreenParam === 'true') {
 	<body>
 		<canvas id="screen" width="480" height="320"></canvas>
 		<section id="gameinfo">
-			<!--<table id="mapping">
-				<tr>
-					<td>Up</td>
-					<td>Up</td>
-				</tr>
-				<tr>
-					<td>Down</td>
-					<td>Down</td>
-				</tr>
-				<tr>
-					<td>Left</td>
-					<td>Left</td>
-				</tr>
-				<tr>
-					<td>Right</td>
-					<td>Right</td>
-				</tr>
-				<tr>
-					<td>A</td>
-					<td>Z</td>
-				</tr>
-				<tr>
-					<td>B</td>
-					<td>X</td>
-				</tr>
-				<tr>
-					<td>L</td>
-					<td>A</td>
-				</tr>
-				<tr>
-					<td>R</td>
-					<td>S</td>
-				</tr>
-				<tr>
-					<td>Start</td>
-					<td>Enter</td>
-				</tr>
-				<tr>
-					<td>Select</td>
-					<td>\</td>
-				</tr>
-			</table>-->
+			
 		</section>
 		<section id="controls">
 			<div id="preload">
@@ -442,5 +401,125 @@ if (fullscreenParam === 'true') {
 			</div>
 		</section>
 
+
+		<!--Help modal-->
+
+		<style>
+.wrapper1 a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: #585858;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal1 {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(77, 77, 77, .7);
+  transition: all .4s;
+}
+
+.modal1:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__content {
+  border-radius: 4px;
+  position: relative;
+  width: 500px;
+  max-width: 90%;
+  background: #fff;
+  padding: 1em 2em;
+}
+
+.modal__footer {
+  text-align: right;
+  a {
+    color: #585858;
+  }
+  i {
+    color: #d02d2c;
+  }
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #585858;
+  text-decoration: none;
+}
+		</style>
+
+			<a href="#help" style="position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%);"><?xml version="1.0" encoding="utf-8"?>
+				<svg width="20px" height="20px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>Help (controls)</title><path d="M256,80A176,176,0,1,0,432,256,176,176,0,0,0,256,80Z" style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-width:32px"/><path d="M200,202.29s.84-17.5,19.57-32.57C230.68,160.77,244,158.18,256,158c10.93-.14,20.69,1.67,26.53,4.45,10,4.76,29.47,16.38,29.47,41.09,0,26-17,37.81-36.37,50.8S251,281.43,251,296" style="fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:28px"/><circle cx="250" cy="348" r="20"/></svg></a>
+		
+		<div id="help" class="modal1">
+			<div class="modal__content">
+				<h1>GBA Emulator Help</h1>
+		<h4>Controls</h4>
+				<table>
+					<tr>
+					<td>Up</td>
+					<td>W</td>
+					</tr>
+					<tr>
+					<td>Down</td>
+					<td>S</td>
+					</tr>
+					<tr>
+					<td>Left</td>
+					<td>A</td>
+					</tr>
+					<tr>
+					<td>Right</td>
+					<td>D</td>
+					</tr>
+					<tr>
+					<td>A</td>
+					<td>K</td>
+					</tr>
+					<tr>
+					<td>B</td>
+					<td>L</td>
+					</tr>
+					<tr>
+					<td>L</td>
+					<td>I</td>
+					</tr>
+					<tr>
+					<td>R</td>
+					<td>O</td>
+					</tr>
+					<tr>
+					<td>Start</td>
+					<td>Enter</td>
+					</tr>
+					<tr>
+					<td>Select</td>
+					<td>Shift</td>
+					</tr>
+					</table>
+		
+				<div class="modal__footer">
+					See <a href="https://docs.yeahgames.net">the docs</a> to learn more.
+				</div>
+		
+				<a href="#" class="modal__close">&times;</a>
+			</div>
+		</div>
+		<!--End help modal-->
 	</body>
 </html>
