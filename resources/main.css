@@ -1,5 +1,5 @@
 body {
-	background: url('bg.png') no-repeat top center, #15181f;
+	background: url('/resources/bg.png') no-repeat top center, #15181f;
 	text-align: center;
 	margin: 0;
 	color: white;
