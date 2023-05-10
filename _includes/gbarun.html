@@ -366,9 +366,17 @@ if (fullscreenParam === 'true') {
 				/>
 			</div>
 			<div id="ingame" class="hidden">
-				<button id="pause" onclick="togglePause()">
-					PAUSE
-				</button>
+				<button onclick="togglePause()" style="position: absolute; right: 96%; top: 95%; transform: translate(-50%, -50%);background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 6px;
+                transition: background-color 0.3s ease;
+                background-image: linear-gradient(#ff4747, #f08282);">
+  gondolas
+</button>
 				<button  onclick="reset()">RESET</button>
 				<button onclick="gba.downloadSavedata()">
 					SAVE
